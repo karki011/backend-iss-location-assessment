@@ -65,13 +65,13 @@ def get_rise_time(lat, lon):
 def show_dot(lat, lon, timestamp):
     """puts indy dot on the map along with the timestamp"""
     # Assumes that screen is already setup
-    indy_dot = turtle.Turtle()
-    indy_dot.penup()
-    indy_dot.color("yellow")
-    indy_dot.goto(lon, lat)
-    indy_dot.dot(5)
-    indy_dot.hideturtle()
-    indy_dot.write(time.ctime(timestamp))
+    location_dot = turtle.Turtle()
+    location_dot.penup()
+    location_dot.color("yellow")
+    location_dot.goto(lon, lat)
+    location_dot.dot(5)
+    location_dot.hideturtle()
+    location_dot.write(time.ctime(timestamp))
 
 
 def main():
@@ -91,10 +91,10 @@ def main():
     print("See popup")
 
     print("~~~Part D: Indianapolis Coordinates~~~")
-    indy_lat = 39.7684
-    indy_long = -86.1581
-    risetime = get_rise_time(indy_lat, indy_long)
-    show_dot(indy_lat, indy_long, risetime)
+    location_lat = 33.522861
+    location_long = -86.807701
+    risetime = get_rise_time(location_lat, location_long)
+    show_dot(location_lat, location_long, risetime)
     # show indy risetime
 
     # CLEANUP SCREEN STUFF
